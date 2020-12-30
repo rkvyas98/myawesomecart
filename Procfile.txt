@@ -1,0 +1,1 @@
+web: gunicorn myawesomeecart.wsgi --log-file -
