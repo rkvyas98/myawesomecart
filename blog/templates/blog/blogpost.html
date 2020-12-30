@@ -8,9 +8,6 @@
             <h2 class="pb-2 font-italic ">
                 {{post.title}}
             </h2>
-            <a href="{{post.post_id|add:-1}}" class="stretched-link">BAck</a>
-            <a href="{{post.post_id|add:1}}" class="stretched-link">next</a>
-
             
             <p class=" pb-1 blog-post-meta border-bottom">{{post.pub_date}} <a href="#"></a> </p>
 
@@ -20,33 +17,29 @@
                 <h3>{{post.head1}}</h3>
                 <p> {{post.chead1}} Content </p>                
                 <h3>{{post.head2}}</h3>
-                <p> {{post.chead2}} Content </p>                
+                <p> {{post.chead2}} Content </p>       
+                <a href="{{post.post_id|add:-1}}" class="stretched-link badge badge-dark p-2">Previous Post</a>
+                <a href="{{post.post_id|add:1}}" class="stretched-link badge badge-dark p-2" style="float:right">Next Post</a>
+                <br> <br>
 
                 <!-- Like and share facebook plugin -->
-                <div class="fb-like" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+                <div class="fb-like" data-href="http://127.0.0.1:8000/blog/blogpost/00{{post.post_id}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
 
                 <!-- Comment facebook plugin -->
-                <div class="fb-comments col-sm-12" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-numposts="" data-width=""></div>
+                <div class="fb-comments col-sm-12" data-href="http://127.0.0.1:8000/blog/blogpost/00{{post.post_id}}" data-numposts="" data-width=""></div>
                  
                
-            </div><!-- /.blog-post -->
-
-          
-
-
-        </div><!-- /.blog-main -->
+            </div>
+        </div>
 
         <aside class="col-md-4 blog-sidebar">
             <div class="p-4 mb-3 bg-light rounded">
                 <h4 class="font-italic">About</h4>
                 <p class="mb-0">My Awesome Cart <em>started out as a small project and is now</em> the fastest growing e-commerce stores of all times in india and abroad.</p>
                 <p>If you like our website. Please hit the like button!</p>
-                <div class="fb-like" data-href="http://127.0.0.1:8000/blog/blogpost/" data-width="" data-layout="button_count" data-action="like" data-size="large" ></div>
+                <div class="fb-like" data-href="http://127.0.0.1:8000/blog/blogpost/00" data-width="" data-layout="button_count" data-action="like" data-size="large" ></div>
 
             </div>
-
-           
-
             <div class="p-4">
                 <h4 class="font-italic">Elsewhere</h4>
                 <ol class="list-unstyled">
