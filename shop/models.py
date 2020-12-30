@@ -38,6 +38,9 @@ class Orders(models.Model):
     state = models.CharField(max_length=111)
     zip_code = models.CharField(max_length=111)
     phone = models.CharField(max_length=111, default="")
+    
+    def __str__(self):
+        return str(self.order_id) + " " + self.name
 
 class OrderUpdate(models.Model):
     update_id  = models.AutoField(primary_key=True)

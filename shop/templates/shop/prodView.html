@@ -1,6 +1,14 @@
 {% extends 'shop/basic.html' %}
 
 {% block title%} {{product.product_name}} - My Awesome Cart{% endblock %}
+
+{% block css %} 
+img{
+    height : 100%;
+    width : 100%;
+}
+{% endblock %}
+
 {% block body %}
 <div class="container">
     <div class="row mt-5">
@@ -9,8 +17,8 @@
                 <img src="/media/{{product.image}}" >
             </div>
             <div class="row">
-                <button class="btn btn-primary my-5 mx-3">Buy Now</button>
-                <button class="btn btn-primary my-5">Add To Cart</button>
+                <button class="btn btn-dark my-5 mx-3">Buy Now</button>
+                <button class="btn btn-dark my-5">Add To Cart</button>
             </div>
         </div>
         <div class=" col-md-6">
