@@ -9,7 +9,7 @@ def index(request):
     return render(request, 'blog/index.html', {'myposts': myposts})
     
 def blogpost(request, id):
-    if id == 1 or id == 2 or id == 3 or id == 4:
+    if id == 1 or id == 2 or id == 3 or id == 4 or id ==5:
         post = Blogpost.objects.filter(post_id = id)[0]
         return render(request, 'blog/blogpost.html', {'post' : post})
     else:

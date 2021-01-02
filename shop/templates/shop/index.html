@@ -27,6 +27,14 @@
           body .carousel-control-next-icon{
             background-color: #000;
           }
+          .carousel-control-prev-icon{
+            position:relative; 
+            right: 45px;
+          }
+          .carousel-control-next-icon{
+            position:relative; 
+            left: 45px;
+          }
           .carousel-control-prev,
           .carousel-control-next{
             top: auto;
@@ -133,7 +141,7 @@ UpdatePopover(cart)
     var i = 1;
     for(var item in cart){
       popStr = popStr + "<b>" + i + ". </b>"
-      popStr = popStr + document.getElementById('name'+ item).innerHTML.slice(0,20) + "... Qty: " + cart[item][0] + "<br>";
+      popStr = popStr + document.getElementById('name'+ item).innerHTML.slice(0,10) + ".. Qty: " + cart[item][0] + " Rs: " + cart[item][0] * cart[item][2] + "<br>";
       i = i+1;
     }
     popStr = popStr + "</div> <a href='/shop/checkout'><button class='btn btn-dark' id ='checkout'>Checkout</button></a> <button class='btn btn-dark' onclick='clearCart()' id ='clearCart'>Clear Cart</button>     "
@@ -156,6 +164,7 @@ UpdatePopover(cart)
     sum = 0
       for (var item in cart) {
         sum = sum + cart[item][0]
+          console.log(item);
           document.getElementById('div' + item).innerHTML = "<button id='minus" + item + "' class='btn btn-dark minus'>-</button> <span id='val" + item + "''>" + cart[item][0] + "</span> <button id='plus" + item + "' class='btn btn-dark plus'> + </button>";
       }
       localStorage.setItem('cart', JSON.stringify(cart));

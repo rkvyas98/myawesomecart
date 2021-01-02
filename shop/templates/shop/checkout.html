@@ -1,5 +1,6 @@
 {% extends 'shop/basic.html' %}
 {% block title%} Checkout - My Awesome Cart{% endblock %}
+{% block cs5 %} active {% endblock %}
 {% block body %}
 <div class="container">
     <div class="col my-4">
@@ -73,7 +74,7 @@
   var totalPrice = 0;
   if( $.isEmptyObject(cart)){
     //   If cart is empty
-    mystr = `<p>Your Cart is empty, please add some items in your cart before checcking out! </p>`
+    mystr = `<p>Your Cart is empty, please add some items in your cart before checking out! </p>`
     $('#items').append(mystr);
   }
   for(var item in cart){
